@@ -3,16 +3,20 @@ body {
   color: #665544;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .container {
   width: 700px;
   display: flex;
   flex-direction: row;
+  align-self: center;
 }
 
-
+.result {
+  align-self: center;
+  color: blue;
+}
 
 .box {
   flex-grow: 1;
@@ -24,7 +28,7 @@ body {
 
 
 .button {
-  background-color: #4CAF50;
+  background-color: blue;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -33,4 +37,13 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 15px;
+}
+
+.inbox {
+  width: 150px;
+}
+
+.label {
+  font-weight: bold;
 }
