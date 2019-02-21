@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #button {
+        border-radius: 2px;
+      }
+      .box * {
+        height: 30px;
+      }
+      #result {
+        display:none;
+      }
+    </style>
+    <script type="text/javascript">
+      function calculate(number) {
+        switch (number) {
+          case '1':
+          case '3':
+          case '5':
+          case '7':
+          case '8':
+          case '10':
+          case '12': return '31 ngày'; break;
+          case '2': return '28 hoặc 29 ngày'; break;
+          case '4':
+          case '6':
+          case '9':
+          case '11': return '30 ngày';
+        }
+      }
+      function display() {
+        const number = document.getElementById('text').value;
+        const div = document.getElementById('result');
+        if (calculate(number)){
+          div.innerHTML = `Tháng ${number} có ${calculate(number)}`;
+          div.style.display = 'block';
+        } else {
+          div.style.display = 'none';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <input id="text" type="text">
+      <button  type="button" name="button" onclick="display()">Tính số ngày</button>
+    </div>
+    <div id="result">
+    </div>
+  </body>
+</html>
