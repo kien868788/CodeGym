@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        text-transform: uppercase;
+      }
+    </style>
+    <script type="text/javascript">
+      function IBM (weight,height) {
+        const IBM = weight / Math.pow(height,2);
+        return (IBM < 18.5) ? 'Underweight' :
+                (IBM < 25.0) ? 'Normal' :
+                (IBM < 30.0) ? 'Overweight' : 'Obese';
+      }
+      function displayIBM () {
+        const result = IBM(document.getElementById('weight-input').value,document.getElementById('height-input').value);
+        alert(result);
+      }
+    </script>
+  </head>
+  <body>
+    <form >
+      <div class="box">
+        <label for="weight-input">weight</label>
+        <input id="weight-input" type="text">
+      </div>
+      <div class="box">
+        <label for="height-input">height</label>
+        <input id="height-input" type="text">
+      </div>
+      <button id="button" type="submit" name="button" onclick="displayIBM()">submit</button>
+    </form>
+  </body>
+</html>
