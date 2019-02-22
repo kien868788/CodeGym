@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    button {
+      margin-right: 10px;
+    }
+    #input2 {
+      margin-left: 10px;
+    }
+    </style>
+
+    <script type="text/javascript">
+      function getInput() {
+        const number1 = Number(document.getElementById('input1').value);
+        const number2 = Number(document.getElementById('input2').value);
+        return {number1,number2};
+      }
+
+      function calculate({number1,number2},type) {
+        switch (type) {
+          case '+': return number1 + number2; break;
+          case '-': return number1 - number2; break;
+          case '*': return number1 * number2; break;
+          case '/': return number1 / number2; break;
+        }
+      }
+
+      function display(type) {
+        const numbers = getInput();
+        const h1 = document.getElementById('output');
+        h1.innerHTML = `Result ${type} : ${calculate(numbers,type)}`;
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="input">
+      <input id="input1" type="text">
+      <input id="input2" type="text">
+    </div>
+    <div class="operators">
+      <button type="button" name="button" onclick="display('+')">Addition(+)</button>
+      <button type="button" name="button" onclick="display('-')">Subtraction(-)</button>
+      <button type="button" name="button" onclick="display('*')">Multiplication(X)</button>
+      <button type="button" name="button" onclick="display('/')">Division(/)</button>
+    </div>
+    <h1 id="output"></h1>
+  </body>
+</html>

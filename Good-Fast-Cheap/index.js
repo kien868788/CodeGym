@@ -1,12 +1,17 @@
 const container = {
-  buttons : ['good','fast','cheap'],
+  buttons : ['red','green','blue'],
   currentPicked: [],
   pick: function(type) {
-    if (this.currentPicked.length < 2 && !this.currentPicked.includes(type)) this.currentPicked.push(type);
-    else {
-      this.currentPicked.shift();
-      this.currentPicked.push(type);
+    if (this.currentPicked.includes(type)){
+      const index = this.currentPicked.indexOf(type);
+      this.currentPicked.splice(index,1);
     }
+    else if (this.currentPicked.length < 2)
+              this.currentPicked.push(type);
+         else {
+           this.currentPicked.shift();
+           this.currentPicked.push(type);
+         }
     this.display();
   },
   display: function() {
@@ -14,7 +19,7 @@ const container = {
       if (this.currentPicked.includes(e)) {
         document.getElementById(e).style.backgroundColor = e;
       } else {
-        document.getElementById(e).style.backgroundColor = 'fff';
+        document.getElementById(e).style.backgroundColor = '#fff';
       }
     })
   }
