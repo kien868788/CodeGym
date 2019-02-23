@@ -1,0 +1,23 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.container {
+  max-width: 940px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* box-shadow: red 4px 4px 9px; */
+
+.img {
+  display: block;
+  margin: 1em;
+  padding: 0.2em;
+  width: 600px;
+  height: 150px;
+  vertical-align: middle;
+  border: 0;
+}
