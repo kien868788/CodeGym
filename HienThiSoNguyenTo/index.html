@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function soNguyenTo(n) {
+        if (n < 2) return false;
+        for (let i = 2 ; i <= Math.sqrt(n) ; i++) {
+          if (n%i == 0) return false;
+        }
+        return true;
+      }
+      var sout = "";
+      var number = parseInt(prompt('Nhập số lượng nguyên tố cần in ra '));
+      var count = 0;
+      var n = 2;
+      while (count < number) {
+        if (soNguyenTo(n)) {
+          sout += (n + " ");
+          count++;
+        }
+        n++;
+      }
+      document.write(sout);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

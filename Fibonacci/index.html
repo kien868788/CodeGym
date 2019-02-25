@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script type="text/javascript">
+    var sout = "20 số đầu tiên trong dãy finonacci là : ";
+    (function () {
+      function fibo(n) {
+        if (n == 1) return 0;
+        if (n == 2) return 1;
+        return fibo(n-1) + fibo(n-2);
+      }
+      for (let i = 1; i <= 20 ;i++) {
+        sout += (fibo(i) + " ");
+      }
+      sout += "<br>";
+      sout += "Số đầu tiên chia hết cho 5 là : ";
+      var i = 2;
+      while (true) {
+        if (fibo(i) % 5 == 0) {
+          sout += fibo(i);
+          break;
+        }
+        i++;
+      }
+      sout += "<br> Tổng 20 số đầu tiên trong dãy fibonacci là : ";
+      var sum = 0;
+      for (let i = 1; i <= 5 ;i++) {
+        sum += fibo(i);
+      }
+      sout += (sum + " ");
+    }());
+    document.write(sout);
+  </script>
+  <body>
+
+  </body>
+</html>

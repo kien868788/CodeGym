@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var string = "The Quick Brown Box";
+      var result = "";
+      for (let i = 0; i < string.length ;i++) {
+        if (string[i] >= 'a' && string[i] <= 'z') {
+          result += String.fromCharCode(
+            string.charCodeAt(i) - 32
+          );
+        } else if (string[i] >= "A" && string[i] <= "Z")  {
+          result += String.fromCharCode(
+            string.charCodeAt(i) + 32
+          );
+        } else {
+          result += string[i];
+        }
+      }
+      document.write(result);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

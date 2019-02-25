@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+  var sout = "";
+  for (let i = 1 ; i <= 5; i++) {
+    for (let j = 1 ; j <= i; j++) {
+      sout += "*";
+    }
+    sout += "<br>"
+  }
+  sout += "<br>";
+  for (let i = 1; i <= 5 ;i++) {
+    for (let j = 5 -i;j >= 0; j--) {
+      sout += "*";
+    }
+    sout += "<br>";
+  }
+  sout += "<br>";
+
+  for (let i = 1 ; i <=5 ;i++) {
+    let spaces = 5-i;
+    for (let j = 1; j<= 5; j++) {
+      if (j <= spaces) sout += "&ensp;";
+      else sout += "*";
+    }
+    sout += "<br>";
+  }
+  sout += "<br>";
+
+  for (let i = 1 ; i <=5 ;i++) {
+    let spaces = i-1;
+    for (let j = 1; j<= 5; j++) {
+      if (j <= spaces) sout += "&ensp;";
+      else sout += "*";
+    }
+    sout += "<br>";
+  }
+  sout += "<br>";
+
+  for (let i = 1; i <= 5;i++) {
+    for (let j = 1; j <= 30;j++) {
+      if (i == 1 || i == 5 || j == 1 || j == 30) sout += "*";
+      else sout += "&ensp;";
+    }
+    sout+= "<br>";
+  }
+  document.write(sout);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
