@@ -35,7 +35,8 @@ function init() {
 
 function startGame() {
   /* Số lượng bóng */
-  var numOfBalls = 1
+  var numOfBalls = 1;
+
   width = canvas.width = 600;
   height = canvas.height = 500;
   bar = new Bar(100,height-100,'red',300,20);

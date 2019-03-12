@@ -12,9 +12,7 @@ Bar.prototype.draw = function() {
   ctx.fillRect(this.x, this.y, this.width, this.height);
 }
 
-Bar.prototype.move = function({
-  keyCode
-}) {
+Bar.prototype.move = function({keyCode}) {
   var step = 50;
   if (keyCode == '37') {
     if (this.x - step <= 0) {

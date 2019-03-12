@@ -17,6 +17,7 @@ Ball.prototype.speed = function() {
   return Math.sqrt(this.velX*this.velX + this.velY*this.velY);
 }
 
+/* Góc bóng */
 Ball.prototype.angle = function() {
   return Math.atan2(this.velY,this.velX);
 }
@@ -25,6 +26,7 @@ Ball.prototype.onGround = function() {
   return (this.y + this.radius) >= canvas.height;
 }
 
+/* Va chạm tường */
 Ball.prototype.wallCollision = function() {
   if ((this.x + this.radius) >= width) {
     this.velX = -(this.velX);
@@ -39,6 +41,7 @@ Ball.prototype.wallCollision = function() {
   }
 }
 
+/* Bóng va chạm lẫn nhau */
 Ball.prototype.ballCollision = function() {
   balls.forEach(e => {
     if (e != this && distanceNextFrame(this,e) <= 0) {
@@ -63,6 +66,7 @@ Ball.prototype.ballCollision = function() {
   })
 }
 
+/* Bóng va chạm với thanh bar */
 Ball.prototype.barCollisionDetect = function() {
   // if (((this.x + this.radius >= bar.x) && (this.x + this.radius <= bar.x + bar.width))
   //                                     &&
